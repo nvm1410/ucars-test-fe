@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="header">
+        <p class="title">CAR BRANDS LIST</p>
+        <div class="btn-add">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.625 4.375V0H4.375V4.375H0V5.625H4.375V10H5.625V5.625H10V4.375H5.625Z" fill="white" />
+            </svg>
+            <p style="cursor:pointer" (click)="toAdd()">Add brand</p>
+        </div>
+    </div>
+   <div *ngFor="let brand of brands">
+        <app-brand-list-item [brand]="brand"></app-brand-list-item>
+   </div>
+</div>

@@ -1,0 +1,146 @@
+.brand-container {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #b4b4b4;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.active-indicator-1 {
+  width: 2px;
+  height: 64px;
+  flex-shrink: 0;
+  background: #0fc97b;
+}
+.inactive-indicator-1 {
+  width: 2px;
+  height: 64px;
+  flex-shrink: 0;
+  background: #5F5F5F;
+}
+
+.brand-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #2f465f;
+}
+
+.brand-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+}
+
+.brand-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #8c8c8c;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.small-separator {
+  width: 1px;
+  height: 16px;
+  background: #e3e3e3;
+}
+
+.brand-model-count {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #0f5edd;
+}
+
+.brand-last-update-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #2f465f;
+  white-space: nowrap;
+}
+
+.brand-last-update-time {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #8c8c8c;
+}
+
+.active-indicator-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  gap: 8px;
+  background: #fafafa;
+  border-radius: 4px;
+}
+
+.active-indicator-circle {
+  width: 12px;
+  height: 12px;
+  background: #1f7b4d;
+  border-radius: 50%;
+}
+.inactive-indicator-circle {
+  width: 12px;
+  height: 12px;
+  background: #5f5f5f;
+  border-radius: 50%;
+}
+.active-indicator-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1f7b4d;
+}
+.inactive-indicator-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5f5f5f;
+}
+
+.view-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 16px;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #232323;
+  cursor: pointer;
+  border: 1px solid #b4b4b4;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+p {
+  margin: 0;
+}

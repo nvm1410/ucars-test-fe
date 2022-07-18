@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="header">
+        <div class="cursor-pointer" (click)="back()">
+            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.41 10.59L2.83 6L7.41 1.41L6 0L0 6L6 12L7.41 10.59Z" fill="#232323" />
+            </svg>
+        </div>
+        <p class="title">Brand details</p>
+    </div>
+    <div class="m-spacer"></div>
+    <p class="bold-text">Brand logo</p>
+    <div class="xs-spacer"></div>
+    <div class="separator"></div>
+    <div class="s-spacer"></div>
+    <div class="logo">
+        <img class="logo-img" src={{brand.logo}}/>
+    </div>
+    <div class="m-spacer"></div>
+    <p class="bold-text">Brand details</p>
+    <div class="xs-spacer"></div>
+    <div class="separator"></div>
+    <div class="s-spacer"></div>
+    <div class="brand-name-and-status">
+        <div>
+            <p class="light-text">Brand Name</p>
+            <div class="xs-spacer"></div>
+            <p class="bold-text">{{brand.name}}</p>
+        </div>
+        <div>
+            <p class="light-text">Brand Status</p>
+            <div class="xs-spacer"></div>
+            <div [ngClass]="brand.is_active ? 'active-indicator' : 'inactive-indicator'">
+                <div [ngClass]="brand.is_active ? 'active-indicator-circle-outline' : 'inactive-indicator-circle-outline'">
+                    <div [ngClass]="brand.is_active ? 'active-indicator-circle' : 'inactive-indicator-circle'">
+                    
+                    </div>
+                </div>
+                <p [ngClass]="brand.is_active ? 'active-indicator-text' : 'inactive-indicator-text'">{{brand.is_active?'Active':'Inactive'}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="xm-spacer"></div>
+    <div>
+        <p class="light-text">Brand Description</p>
+        <div class="xs-spacer"></div>
+        <p class="bold-text">{{brand.description}}</p>
+    </div>
+    <div class="xl-spacer"></div>
+    <div class="edit-btn" (click)="toEdit(brand.id)">Edit information</div>
+</div>

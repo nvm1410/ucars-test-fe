@@ -1,0 +1,24 @@
+<div class="brand-container">
+    <div class="checkbox"></div>
+    <div class="logo">
+        <img class="logo-img" src={{brand.logo}}/>
+    </div>
+    <div [ngClass]="brand.is_active ? 'active-indicator-1' : 'inactive-indicator-1'"></div>
+    <div class="brand-details">
+        <p class="brand-name">{{brand.name}}</p>
+        <div class="brand-info">
+            <p class="brand-description">{{brand.description}}</p>
+            <div class="small-separator"></div>
+            <p class="brand-model-count">{{brand.model_count}} models</p>
+        </div>
+    </div>
+    <div class="brand-last-update">
+        <p class="brand-last-update-text">Last update</p>
+        <p class="brand-last-update-time">{{brand.last_update}}</p>
+    </div>
+    <div class="active-indicator-2">
+        <div [ngClass]="brand.is_active ? 'active-indicator-circle' : 'inactive-indicator-circle'"></div>
+        <p [ngClass]="brand.is_active ? 'active-indicator-text' : 'inactive-indicator-text'">{{brand.is_active?'Active':'Inactive'}}</p>
+    </div>
+    <div class="view-btn" (click)="toDetails(brand.id)">View details</div>
+</div>

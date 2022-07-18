@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="header">
+        <div class="cursor-pointer" style="display:flex;align-items:center;gap:10px;" (click)="back()">
+            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.41 10.59L2.83 6L7.41 1.41L6 0L0 6L6 12L7.41 10.59Z" fill="#232323" />
+            </svg>
+            <p class="bold-text">Back</p>
+        </div>
+        
+       
+    </div>
+    <p class="title">Add car brand</p>
+    <p class="light-text">Set up new car brand</p>
+    <div class="m-spacer"></div>
+    <p class="bold-text">Brand logo</p>
+    <div class="xs-spacer"></div>
+    <div class="separator"></div>
+    <div class="s-spacer"></div>
+    <div class="logo">
+        <div class="overlay" (click)="openImagePicker()">Change logo</div>
+        <p [hidden]="base64logo">Choose logo</p>
+        <img [hidden]="!base64logo" class="logo-img" src="{{ base64logo }}"/>
+        <input type="file" accept="image/*" class="img-input" />
+    </div>
+    <div class="m-spacer"></div>
+    <p class="bold-text">Brand details</p>
+    <div class="xs-spacer"></div>
+    <div class="separator"></div>
+    <div class="s-spacer"></div>
+    <div class="brand-name-and-status">
+        <div>
+            <p class="light-text">Brand Name</p>
+            <div class="xs-spacer"></div>
+            <input type="text" [(ngModel)]="brandNameValue" (ngModelChange)="onBrandNameChange($event)" />
+        </div>
+        <div>
+            <p class="light-text">Brand Status</p>
+            <div class="xs-spacer"></div>
+            <div [ngClass]="brandStatusValue==='active' ? 'active-indicator' : 'inactive-indicator'" (click)="openSelect()">
+                
+                <div [ngClass]="brandStatusValue==='active'? 'active-indicator-circle-outline': 'inactive-indicator-circle-outline'">
+                    <div [ngClass]="brandStatusValue==='active'? 'active-indicator-circle': 'inactive-indicator-circle'"></div>
+                </div>
+                <p [ngClass]="brandStatusValue==='active'? 'active-indicator-text': 'inactive-indicator-text'">
+                    {{ brandStatusValue==='active' ? "Active" : "Inactive" }}
+                </p>
+                <select [(ngModel)]="brandStatusValue" (ngModelChange)="onStatusChange($event)" class="select-status">
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+                <!-- <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.41 0.590088L6 5.17009L10.59 0.590088L12 2.00009L6 8.00009L0 2.00009L1.41 0.590088Z"
+                        fill="#232323" />
+                </svg> -->
+
+            </div>
+        </div>
+    </div>
+    <div class="xm-spacer"></div>
+    <div>
+        <p class="light-text">Brand Description</p>
+        <div class="xs-spacer"></div>
+        <textarea type="text" [(ngModel)]="brandDescriptionValue"
+            (ngModelChange)="onBrandDescriptionChange($event)"></textarea>
+    </div>
+    <div class="xl-spacer"></div>
+    <div class="edit-btn" (click)="addBrand()">Create brand</div>
+</div>
